@@ -6,7 +6,7 @@ gem 'jquery-rails'                                 # JQuery for rails
 gem 'mongoid'                                      # Data driver
 gem 'devise'                                       # Authentication
 gem 'haml'                                         # Haml support for views
-
+gem 'meta_search'                                  # For quick sorting/filtering
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

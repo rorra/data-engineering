@@ -1,6 +1,13 @@
 %header
   - if user_signed_in?
-    = link_to("Logout", destroy_user_session_path, method: :delete)
+    .float-left
+      = link_to("Merchants", merchants_path)
+      = link_to("Products", products_path)
+      = link_to("Sales", sales_path)
+    .float-right
+      = link_to("Logout", destroy_user_session_path, method: :delete)
+    .clear
   - else
-    = link_to("Sign in", new_user_session_path)
-    = link_to("Sign up", new_user_registration_path)
+    .float-right
+      = link_to("Sign in", new_user_session_path)
+      = link_to("Sign up", new_user_registration_path)
