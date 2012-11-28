@@ -1,2 +1,9 @@
 %h1= "Hello #{current_user.name}"
 
+
+%h3 Process a tet file
+
+= form_tag process_file_path, multipart: true, method: :post do
+  = file_field_tag :text_file
+  %br
+  = submit_tag "Submit"

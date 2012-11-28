@@ -1,0 +1,17 @@
+%h1 Merchant list
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th &nbsp;
+  %tbody
+    - @merchants.each do |merchant|
+      %tr
+        %td= merchant.name
+        %td= merchant.address
+        %td
+          = link_to("Sales", [merchant, :sales])
+          = link_to("Products", [merchant, :products])
+

@@ -1,13 +1,13 @@
 class Product
   include Mongoid::Document
 
-  embeds_many :sales
-  embedded_in :merchant
+  has_many :sales
+  belongs_to :merchant
 
-  attr_accessible :description
+  attr_accessible :product, :description, :price
 
   field :description, type: String
-  field :price, Float
+  field :price, type: Float
 
   validates :description, presence: true, uniqueness: { scope: :merchant }
   validates :price, presence: :true

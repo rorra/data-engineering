@@ -1,8 +1,8 @@
 class Merchant
   include Mongoid::Document
 
-  embeds_many :products
-  embeds_many :sales
+  has_many :products
+  has_many :sales
 
   attr_accessible :address, :name
 

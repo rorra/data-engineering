@@ -1,0 +1,18 @@
+%h1 Product list
+
+%table
+  %thead
+    %tr
+      %th Merchant
+      %th Description
+      %th Price
+      %th &nbsp;
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.merchant.try(:name)
+        %td= product.description
+        %td= product.price
+        %td
+          = link_to("Sales", [product, :sales])
+

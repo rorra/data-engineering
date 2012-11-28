@@ -1,0 +1,22 @@
+%h1 Sales list
+
+%table
+  %thead
+    %tr
+      %th Purchaser
+      %th Merchant
+      %th Product
+      %th Price
+      %th Quantity
+      %th Total
+      %th &nbsp;
+  %tbody
+    - @sales.each do |sale|
+      %tr
+        %td= sale.purchaser
+        %td= sale.merchant.try(:name)
+        %td= sale.product.try(:description)
+        %td= sale.product.try(:price)
+        %td= sale.quantity
+        %td= sale.amount
+

@@ -6,9 +6,13 @@ DataEngineering::Application.routes.draw do
     resources :sales, only: :index
   end
 
-  resources :products, only: :index
+  resources :products, only: :index do
+    resources :sales
+  end
 
   resources :sales, only: :index
+
+  match 'process-file', to: 'home#process_file', as: :process_file
 
   root to: 'home#index'
 end

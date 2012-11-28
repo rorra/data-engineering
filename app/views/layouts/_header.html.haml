@@ -1,6 +1,7 @@
 %header
   - if user_signed_in?
     .float-left
+      = link_to("Home", root_path)
       = link_to("Merchants", merchants_path)
       = link_to("Products", products_path)
       = link_to("Sales", sales_path)
