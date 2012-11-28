@@ -16,3 +16,5 @@
 
 # Ide files
 .idea
+
+config/mongoid.yml
